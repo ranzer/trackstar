@@ -1,0 +1,90 @@
+2014/04/16 11:20:15 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (D:\xampp\htdocs\trackstar\protected\views\layouts\main.php:51)
+Stack trace:
+#0 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 D:\xampp\htdocs\trackstar\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 D:\xampp\htdocs\trackstar\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 D:\xampp\htdocs\trackstar\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 D:\xampp\htdocs\trackstar\protected\views\layouts\column1.php(6): SiteController->endContent()
+#7 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(126): require()
+#8 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 D:\xampp\htdocs\trackstar\framework\web\CController.php(784): SiteController->renderFile()
+#10 D:\xampp\htdocs\trackstar\protected\controllers\SiteController.php(32): SiteController->render()
+#11 D:\xampp\htdocs\trackstar\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 D:\xampp\htdocs\trackstar\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 D:\xampp\htdocs\trackstar\framework\web\CController.php(286): SiteController->runAction()
+#14 D:\xampp\htdocs\trackstar\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 D:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): SiteController->run()
+#16 D:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\xampp\htdocs\trackstar\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\trackstar\index.php(13): CWebApplication->run()
+#19 D:\xampp\htdocs\trackstar\framework\cli\commands\ShellCommand.php(78): require()
+#20 D:\xampp\htdocs\trackstar\framework\console\CConsoleCommandRunner.php(71): ShellCommand->run()
+#21 D:\xampp\htdocs\trackstar\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#22 D:\xampp\htdocs\trackstar\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#23 D:\xampp\htdocs\trackstar\framework\yiic.php(33): CConsoleApplication->run()
+#24 D:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once()
+REQUEST_URI=/index.php
+2014/04/16 11:20:15 [error] [php] date(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. (D:\xampp\htdocs\trackstar\protected\views\layouts\main.php:51)
+Stack trace:
+#0 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 D:\xampp\htdocs\trackstar\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#2 D:\xampp\htdocs\trackstar\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 D:\xampp\htdocs\trackstar\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(300): SiteController->endWidget()
+#6 D:\xampp\htdocs\trackstar\protected\views\layouts\column1.php(6): SiteController->endContent()
+#7 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(126): require()
+#8 D:\xampp\htdocs\trackstar\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 D:\xampp\htdocs\trackstar\framework\web\CController.php(784): SiteController->renderFile()
+#10 D:\xampp\htdocs\trackstar\protected\controllers\SiteController.php(32): SiteController->render()
+#11 D:\xampp\htdocs\trackstar\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#12 D:\xampp\htdocs\trackstar\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 D:\xampp\htdocs\trackstar\framework\web\CController.php(286): SiteController->runAction()
+#14 D:\xampp\htdocs\trackstar\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 D:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(282): SiteController->run()
+#16 D:\xampp\htdocs\trackstar\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 D:\xampp\htdocs\trackstar\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 D:\xampp\htdocs\trackstar\index.php(13): CWebApplication->run()
+#19 D:\xampp\htdocs\trackstar\framework\cli\commands\ShellCommand.php(78): require()
+#20 D:\xampp\htdocs\trackstar\framework\console\CConsoleCommandRunner.php(71): ShellCommand->run()
+#21 D:\xampp\htdocs\trackstar\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#22 D:\xampp\htdocs\trackstar\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#23 D:\xampp\htdocs\trackstar\framework\yiic.php(33): CConsoleApplication->run()
+#24 D:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once()
+REQUEST_URI=/index.php
+2014/04/17 11:31:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'trackstar.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/04/17 11:39:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_project' already exists. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) not null,
+	`description` text not null,
+	`create_time` datetime default null,
+	`create_user_id` int(11) default null,
+	`update_time` datetime default null,
+	`update_user_id` int(11) default null
+) engine=innodb.
+2014/04/17 11:39:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_project' already exists. The SQL statement executed was: CREATE TABLE `tbl_project` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255) not null,
+	`description` text not null,
+	`create_time` datetime default null,
+	`create_user_id` int(11) default null,
+	`update_time` datetime default null,
+	`update_user_id` int(11) default null
+) engine=innodb' in D:\xampp\htdocs\trackstar\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\xampp\htdocs\trackstar\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 D:\xampp\htdocs\trackstar\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_project', Array, 'engine=innodb')
+#2 D:\xampp\htdocs\trackstar\protected\migrations\m140417_093149_create_project_table.php(15): CDbMigration->createTable('tbl_project', Array, 'engine=innodb')
+#3 D:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(385): m140417_093149_create_project_table->up()
+#4 D:\xampp\htdocs\trackstar\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140417_093149_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 D:\xampp\htdocs\trackstar\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 D:\xampp\htdocs\trackstar\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 D:\xampp\htdocs\trackstar\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 D:\xampp\htdocs\trackstar\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 D:\xampp\htdocs\trackstar\framework\yiic.php(33): CApplication->run()
+#11 D:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('D:\xampp\htdocs...')
+#12 {main}
+---
