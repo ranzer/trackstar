@@ -12,7 +12,7 @@
  * @property string $update_time
  * @property integer $update_user_id
  */
-class Project extends CActiveRecord
+class Project extends TrackStarActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -36,7 +36,7 @@ class Project extends CActiveRecord
 			array('create_time, update_time', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, description, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
+			array('id, name, description, create_user_id, update_user_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,6 +48,8 @@ class Project extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'issues' => array(self::HAS_MANY, 'Issue', 'project_id'),
+			'users' => array(self::MANY_MANY, 'User', 'tbl_project_user_assignment(project_id, user_id)'),
 		);
 	}
 
@@ -107,5 +109,12 @@ class Project extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	
+	public function getUserOptions()
+	{
+		$usersArray = CHtml::listData($this->users, 'id', 'username');
+		
+		return $usersArray;
 	}
 }
