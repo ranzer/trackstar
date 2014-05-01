@@ -1,3 +1,4 @@
+<?php
 class RbacCommand extends CConsoleCommand 
 {
 	private $_authManager;
@@ -38,9 +39,23 @@ class RbacCommand extends CConsoleCommand
 			$this->_authManager->createOperation(
 				'deleteUser',
 				'Remove a user from a project');
+				
 			$this->_authManager->createOperation(
 				'createProject',
 				'Create a new project');
+			$this->_authManager->createOperation(
+				'readProject',
+				'Read project information');
+			$this->_authManager->createOperation(
+				'updateProject',
+				'Update project information');
+			$this->_authManager->createOperation(
+				'deleteProject',
+				'Delete a project');
+			
+			$this->_authManager->createOperation(
+				'createIssue',
+				'Create a new issue');
 			$this->_authManager->createOperation(
 				'readIssue',
 				'Read issue information');
