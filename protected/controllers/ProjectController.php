@@ -129,7 +129,12 @@ class ProjectController extends Controller
 			'model'=>$model,
 		));
 	}
-
+	
+	public function actionAdduser()
+	{
+		$this->render('adduser', array('model' => $model));
+	}
+	
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
