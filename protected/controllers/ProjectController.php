@@ -130,9 +130,39 @@ class ProjectController extends Controller
 		));
 	}
 	
-	public function actionAdduser()
+	public function actionAdduser($id)
 	{
-		$this->render('adduser', array('model' => $model));
+		$project = $this->loadModel($id);
+		
+		if (!Yii::app()->user->checkAccess('createUser', 
+			array('project' => $project)))
+		{
+			throw new CHttpException(403, 'You are not authorized to perform this action');
+		}
+		
+		$form = new ProjectUserForm();
+		
+		if (isset($_POST['ProjectUserForm']))
+		{
+			$form->attributes = $_POST['ProjectUserForm'];
+			$form->project = $project;
+			
+			if ($form->validate())
+			{
+				if ($form->assign())
+				{
+					Yii::app()->user->setFlash('success', $form->username . 
+						' has been added to the project.');
+						
+					$form->unsetAttributes();
+					$form->cleanErrors();
+				}
+			}
+		}
+
+		$form->project = $project;
+		
+		$this->render('adduser', array('model' => $form));
 	}
 	
 	/**
