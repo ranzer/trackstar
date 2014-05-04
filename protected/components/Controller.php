@@ -38,6 +38,14 @@ class Controller extends CController
 				'controllers' => array('issue', 'project', 'user'),
 				'users' => array('*'),
 				),
-			);
+			),
+			array('allow',
+				'controllers' => array('project'),
+				'actions' => array('adduser'),
+				'users' => array('@')
+			),
+			array('deny',
+				'users' => array('*'),
+			),
 	}
 }
