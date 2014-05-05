@@ -126,7 +126,7 @@ class Project extends TrackStarActiveRecord
 				'role' => $role,
 				'user_id' => $userId,
 				'project_id' => $this->id,
-			),
+			)
 		);
 	}
 	
