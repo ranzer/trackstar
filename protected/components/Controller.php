@@ -28,16 +28,15 @@ class Controller extends CController
 				'controllers' => array('issue', 'project', 'user'),
 				'actions' => array('index', 'view'),
 				'users' => array('@'),
-				),
+			),
 			array('allow', 
 				'controllers' => array('users', 'project', 'user'),
 				'actions' => array('create', 'update'),
 				'users' => array('@'),
-				),
+			),
 			array('allow',
 				'controllers' => array('issue', 'project', 'user'),
 				'users' => array('*'),
-				),
 			),
 			array('allow',
 				'controllers' => array('project'),
@@ -47,5 +46,6 @@ class Controller extends CController
 			array('deny',
 				'users' => array('*'),
 			),
+		);
 	}
 }
