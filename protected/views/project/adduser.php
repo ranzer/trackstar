@@ -1,5 +1,4 @@
 <?php
-
 $this->pageTitle = Yii::app()->name . ' - Add User To Project';
 $this->breadcrumbs = array(
 	$model->project->name => array('view', 'id' => $model->project->id),
@@ -14,7 +13,7 @@ $this->menu = array(
 
 <?php if (Yii::app()->user->hasFlash('success')): ?>
 <div class="successMessage">
-<?php echo Yii::app()->user->getFlash('success')); ?>
+<?php echo Yii::app()->user->getFlash('success'); ?>
 </div>
 <?phpendif; ?>
 
@@ -37,6 +36,7 @@ $this->menu = array(
 					'style' => 'height: 20px',
 				),
 			));
+		?>
 		<?php echo $form->error($model, 'username'); ?>
 	</div>
 	
