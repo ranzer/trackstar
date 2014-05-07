@@ -11,11 +11,11 @@ $this->menu = array(
 
 <h1>Add User To <?php echo $model->project->name; ?></h1>
 
-<?php if (Yii::app()->user->hasFlash('success')): ?>
+<?php if(Yii::app()->user->hasFlash('success')):?>
 <div class="successMessage">
 <?php echo Yii::app()->user->getFlash('success'); ?>
 </div>
-<?phpendif; ?>
+<?php endif; ?>
 
 <div class="form">
 <?php $form = $this->beginWidget('CActiveForm'); ?>
@@ -28,7 +28,7 @@ $this->menu = array(
 				'name' => 'username',
 				'source' => $model->createUsernameList(),
 				'model' => $model,
-				'attributes' => 'username',
+				'attribute' => 'username',
 				'options' => array(
 					'minLength' => '2',
 				),
