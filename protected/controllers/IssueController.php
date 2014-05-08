@@ -52,8 +52,12 @@ class IssueController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$issue = $this->loadModel($id);
+		$comment = $this->createComment($issue);
+	
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model' => $issue,
+			'comment' => $comment,
 		));
 	}
 
