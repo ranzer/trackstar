@@ -212,4 +212,11 @@ class Issue extends TrackStarActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public function addComment($comment)
+	{
+		$comment->issue_id = $this->id;
+		
+		return $comment->save();
+	}
 }
