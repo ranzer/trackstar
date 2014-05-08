@@ -17,7 +17,7 @@
  * @property Issue $issue
  * @property User $createUser
  */
-class Comment extends CActiveRecord
+class Comment extends TrackStarActiveRecord
 {
 	/**
 	 * @return string the associated database table name
