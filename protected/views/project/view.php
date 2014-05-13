@@ -43,5 +43,13 @@ if (Yii::app()->user->checkAccess('createUser', array('project' => $model)))
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider' => $issueDataProvider,
-	'itemView' => '/issue/_view',
-)); ?>
+	'itemView' => '/issue/_view',)); 
+		
+	$this->beginWidget('zii.widgets.CPortlet', array(
+		'title' => 'Recent Comments On This Project',
+	));
+	
+	$this->widget('RecentCommentsWidget', array('projectId' => $model->id));
+	
+	$this->endWidget();
+?>
