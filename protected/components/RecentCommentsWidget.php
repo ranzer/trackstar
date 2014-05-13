@@ -1,7 +1,7 @@
 <?php
 	class RecentCommentsWidget extends CWidget
 	{
-		private $_comment;
+		private $_comments;
 		public $displayLimit = 5;
 		public $projectId = null;
 		
@@ -9,9 +9,8 @@
 		{
 			if (null !== $this->projectId)
 			{
-				$this->_comments => Comment::model()->with(
-					array('issue' => array('condition' => 'project_id=' . $this->projectId)))
-					->recent($this->displayLimit)->findAll();
+			$this->_comments = Comment::model()->with(
+				array('issue' => array('condition' => 'project_id='.$this->projectId)))->recent($this->displayLimit)->findAll();
 			}
 			else
 			{
