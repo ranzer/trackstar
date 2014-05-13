@@ -170,7 +170,7 @@ class IssueController extends Controller
 		if ($withComments)
 		{
 			$model = Issue::model()->with(array(
-				'comments' => array('with' => 'author'))->findByPk($id);
+				'comments' => array('with' => 'author')))->findByPk($id);
 		}
 		else
 		{
