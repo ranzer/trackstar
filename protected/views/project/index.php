@@ -20,5 +20,9 @@ $this->menu=array(
 		'itemView'=>'_view',
 	)); 
 	
+	$this->beginWidget('zii.widgets.CPortlet', array('title' => 'Recent Comments'));
+	
 	$this->widget('RecentCommentsWidget');
+
+	$this->endWidget();
 ?>
