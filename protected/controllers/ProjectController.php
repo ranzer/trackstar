@@ -111,9 +111,7 @@ class ProjectController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('Project');
 		
-		$sysMessage = SysMessage::model()->find(array(
-			'order' => 't.update_time DESC',
-		));
+		$sysMessage = SysMessage::getLatest();
 		
 		if ($sysMessage != null)
 		{
@@ -191,7 +189,9 @@ class ProjectController extends Controller
 	{
 		$model=Project::model()->findByPk($id);
 		if($model===null)
+		{
 			throw new CHttpException(404,'The requested page does not exist.');
+		}
 		return $model;
 	}
 
