@@ -108,4 +108,16 @@ class SysMessage extends TrackstarActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public static function getLatest()
+	{
+		$dependency = new CDbCacheDependency(
+			'SELECT MAX(update_time) FROM tbl_sys_message');
+			
+		$sysMessage = SysMessage::model()->cache(1800, $dependency)->find(
+			array('order'=>'t.update_time DESC')
+		);
+		
+		return $sysMessage;
+	}
 }
